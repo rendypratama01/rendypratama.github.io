@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <!-- Correcting zooming issue -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- Library untuk VR membangun 3D -->
+        <script src="./js/aframe/aframe.min.js"></script>
+        <!-- Library untuk AR yang melakukan pengenalan marker dan menyematkan kamera-->
+        <script src="./js/arjs/aframe-ar.js"></script>
+        <title>Web Augmented Reality with AR.js</title>
+    </head>
+
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+
+            <a-marker>
+                <!-- Rumah -->
+                <a-box position="0 0 0" rotation="0 0 0" color="#609966"></a-box>
+                <a-tetrahedron position="0 0 -0.97" rotation="36 45 20" radius="1.5" color="#9DC08B"></a-tetrahedron>
+                <!-- Matahari -->
+                <a-circle position="1 0 -3" rotation="-90 0 90" radius="0.5"  color="#FFFF00"></a-circle>
+                <!-- Text -->
+                <a-text value="Ini Rumah" position="0 0.5 0.9" rotation="-90 0 0" color="#CBE4DE" align="center"></a-text>
+                <!-- Awan -->
+                <a-box position="-1 0 -3" rotation="0 90 0"  width="0.2" height="0.6"  color="white"></a-box>
+                <a-box position="0 0 -3.5" rotation="0 90 0"  width="0.2" height="0.6"  color="white"></a-box>
+                <a-box position="2.5 0 -3" rotation="0 90 0"  width="0.2" height="0.6"  color="white"></a-box>
+                <!-- Tanah Rumput -->
+                <a-plane position="0 0 0.5" rotation="0 0 -90" width="5" height="5" color="#00FF7F"></a-plane>
+                <!-- Pohon -->
+                <a-cylinder position="2 0 0" rotation="90 0 0" radius="0.1" height="1" color="#8B4513"></a-cylinder>
+                <a-box position="2 0 -1" rotation="90 0 0" width="0.7" height="1" color="#228B22"></a-box>
+            </a-marker>
+
+            <a-entity camera>
+            </a-entity>
+        </a-scene>
+    </body>
+
+</html>
